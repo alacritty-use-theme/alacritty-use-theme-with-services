@@ -1,6 +1,6 @@
 #! /bin/bash
 
-source ./local/night-and-day/src/shared-variables.sh
+source ./.local/night-and-day/src/shared-variables.sh
 
 
 if [[ "$#" -eq 0 ]]; then
