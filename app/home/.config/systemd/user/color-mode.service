@@ -1,0 +1,9 @@
+[Unit]
+Description="Monitor color mode"
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.portal.Desktop
+ExecStart=@/usr/bin/echo @$
+ExecStop=echo "---_-+++++ Stopped"
+
