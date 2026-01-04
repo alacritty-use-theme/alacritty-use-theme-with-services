@@ -6,7 +6,7 @@ pkgdesc="Systemd units checks if dayNight for location. Updates alacritty theme"
 arch=('x86_64')
 url="https://github.com/christophermca/great-matcha"
 license=('GPL')
-depends=('redshift' 'awk' 'bash')
+depends=('redshift' 'awk' 'bash' 'alacritty-use-theme')
 makedepends=('git')
 source=("git+https://github.com/christophermca/great-matcha.git")
 md5sums=('SKIP')
@@ -18,6 +18,7 @@ pkgver() {
 
 package() {
   cd "$pkgname"
+  # systemd units
   install -Dm755 $srcdir/$pkgname/app/home/.config/systemd/user/color-mode.service "$pkgdir/home/$USER/.config/systemd/user/color-mode.service"
   install -Dm755 $srcdir/$pkgname/app/home/.config/systemd/user/theme-switcher.service "$pkgdir/home/$USER/.config/systemd/user/theme-switcher.service"
   install -Dm755 $srcdir/$pkgname/app/home/.config/systemd/user/theme-switcher.target "$pkgdir/home/$USER/.config/systemd/user/theme-switcher.target"
@@ -31,5 +32,7 @@ package() {
   install -Dm755 $srcdir/$pkgname/app/home/.local/theme-switcher/bin/get-sunrise-sunset.sh "$pkgdir/home/$USER/.local/theme-switcher/bin/get-sunrise-sunset.sh"
   install -Dm755 $srcdir/$pkgname/app/home/.local/theme-switcher/bin/update-gdm.sh "$pkgdir/home/$USER/.local/theme-switcher/bin/update-gdm.sh"
   install -Dm755 $srcdir/$pkgname/app/home/.local/theme-switcher/src/shared-variables.sh "$pkgdir/home/$USER/.local/theme-switcher/src/shared-variables.sh"
+
+  install -Dm755 $srcdir/$pkgname/app/home/.local/share/theme-switcher/toggle-theme-per-mode.sh "$pkgdir/home/$USER/.local/share/theme-switcher/toggle-theme-per-mode.sh"
 
 }
