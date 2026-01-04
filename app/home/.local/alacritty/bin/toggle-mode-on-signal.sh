@@ -9,6 +9,10 @@ interface="org.freedesktop.portal.Settings"
 type="signal"
 member="SettingChanged"
 
+if [[ -f /usr/bin/alacritty-use-theme/use-theme.sh ]]; then
+  source /usr/bin/alacritty-use-theme/use-theme.sh
+fi
+
 function processOutput() {
     awk '
     $2 ~ "color-scheme" { next }

@@ -25,14 +25,17 @@ package() {
   # install -Dm755 $srcdir/$pkgname/app/home/.config/systemd/user/theme-switcher.timer "$pkgdir/home/$USER/.config/systemd/user/theme-switcher.timer"
   # install -Dm755 $srcdir/$pkgname/app/home/.config/systemd/user/update-gtk-theme.service "$pkgdir/home/$USER/.config/systemd/user/update-gtk-theme.service"
 
+  # configuration files
   # install -Dm755 $srcdir/$pkgname/app/home/.config/theme-switcher/environment.env "$pkgdir/home/$USER/.config/theme-switcher/environment.env"
   # install -Dm755 $srcdir/$pkgname/app/home/.config/theme-switcher/mode "$pkgdir/home/$USER/.config/theme-switcher/mode"
 
+  # theme-switcher
   # install -Dm755 $srcdir/$pkgname/app/home/.local/theme-switcher/theme-switcher.sh "$pkgdir/home/$USER/.local/theme-switcher/theme-switcher.sh"
   # install -Dm755 $srcdir/$pkgname/app/home/.local/theme-switcher/bin/get-sunrise-sunset.sh "$pkgdir/home/$USER/.local/theme-switcher/bin/get-sunrise-sunset.sh"
   # install -Dm755 $srcdir/$pkgname/app/home/.local/theme-switcher/bin/update-gdm.sh "$pkgdir/home/$USER/.local/theme-switcher/bin/update-gdm.sh"
   install -Dm755 $srcdir/$pkgname/app/home/.local/theme-switcher/src/shared-variables.sh "$pkgdir/home/$USER/.local/theme-switcher/src/shared-variables.sh"
 
-  install -Dm755 $srcdir/$pkgname/app/home/.local/share/theme-switcher/toggle-theme-per-mode.sh "$pkgdir/home/$USER/.local/share/theme-switcher/toggle-theme-per-mode.sh"
+  # alacritty
+  install -Dm755 $srcdir/$pkgname/app/home/.local/alacritty/bin/toggle-mode-on-signal.sh "$pkgdir/home/$USER/.local/alacritty/bin/toggle-mode-on-signal.sh"
 
 }
