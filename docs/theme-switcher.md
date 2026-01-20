@@ -1,5 +1,5 @@
 ---
-resources:
+dependencies: (alacritty-use-theme, systemd, redshift)
 version: 1
 ---
 This uses systemd units
@@ -9,7 +9,7 @@ This uses systemd units
 
 # services
  ## theme-switcher.service
- `systemd` starts the theme-switcher unit (`theme-switcher.target`, `theme-switcher.timer`, `theme-switcher.service`)
+ **Overview:** `systemd` starts the theme-switcher unit (`theme-switcher.target`, `theme-switcher.timer`, `theme-switcher.service`)
 	  The timer is set **to run every minute** and calls the target, which calls the service.
 	  The service will get the latest state of the sun via Redshift and updates the config if needed.
 
@@ -17,8 +17,10 @@ This uses systemd units
  _Previously named as color-mode.service_
  - Built for the _Gnome Desktop Manager_
  - Uses alacritty-use-theme to set alacritty's theme at runtime.
- ## How it works  
- `systemd` will start the color-mode.service unit. The unit will monitor the system for a dbus signal matching the criteria: `type=signal interface=org.freedesktop.portal.Settings member="SettingChanged"`. If a signal has been found, we search the message for a specific term `color-scheme`. when the `color-scheme` is set to **prefer-dark** the system will favor darker themes, and when the `color-scheme` is either **default** or **prefer-light** the system will favor lighter themes
+
+ **Overview:** `systemd` will start the `alacritty-listen-to-colorscheme.service`. The Service will monitor the system for a dbus signal matching the criteria: `type=signal interface=org.freedesktop.portal.Settings member="SettingChanged"`. 
+ 
+If a signal has been found, we search the message for a specific term `color-scheme`. when the `color-scheme` is set to **prefer-dark** the system will favor darker themes, and when the `color-scheme` is either **default** or **prefer-light** the system will favor lighter themes
  
 ## CHART
 
