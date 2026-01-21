@@ -1,14 +1,14 @@
 #!/bin/bash
 
-THEME_SWITCHER_DIRECTORY="$HOME/.local/theme-switcher"
+THEME_SWITCHER_DIRECTORY="/usr/lib/alacritty-use-theme/bin/theme-switcher"
 
 # DEBUG_MODE ::: Uncomment next-line to force THEME_SWITCHER to update the mode every run
 # DEBUG_THEME_SWITCHER=1
 
 # sets DAY_NIGHT
-source $THEME_SWITCHER_DIRECTORY/bin/get-sunrise-sunset.sh
+source $THEME_SWITCHER_DIRECTORY/get-sunrise-sunset.sh
 
 echo "_____${DAY_NIGHT}____"
 if [ -n $DAY_NIGHT ]; then
-  sh $THEME_SWITCHER_DIRECTORY/bin/update-gdm.sh
+  sh $THEME_SWITCHER_DIRECTORY/update-gdm.sh
 fi

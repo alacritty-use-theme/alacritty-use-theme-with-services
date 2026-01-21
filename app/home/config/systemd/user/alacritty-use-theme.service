@@ -6,11 +6,9 @@ Before=update-gtk-theme.service
 
 [Service]
 Type=oneshot
-WorkingDirectory=%h
-ProtectHome=yes
-EnvironmentFile=%h/.config/theme-switcher/environment.env
-ExecStartPre=%h/.local/share/alacritty/configure-colors.sh
-ExecStart=!%h/.local/theme-switcher/theme-switcher.sh
+WorkingDirectory=/usr/lib/alacritty-use-theme
+EnvironmentFile=/usr/lib/alacritty-use-theme/environment.env
+ExecStart=!/usr/lib/alacritty-use-theme/bin/theme-switcher/theme-switcher.sh
 Restart=on-failure
 
 [Install]

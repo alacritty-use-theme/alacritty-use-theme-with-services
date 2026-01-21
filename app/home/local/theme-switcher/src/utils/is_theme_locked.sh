@@ -1,4 +1,4 @@
-source .local/theme-switcher/src/shared-variables.sh
+source /usr/share/alacritty-use-theme/theme-switcher/shared-variables.sh
 
 is_theme_locked() {
   if [[ -n $LOCK_THEME_SWITCHER ]]; then

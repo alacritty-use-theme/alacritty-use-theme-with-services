@@ -1,8 +1,8 @@
 #!/bin/sh
 
-source $HOME/.local/theme-switcher/src/shared-variables.sh
-source $HOME/.local/theme-switcher/src/utils/debug.sh
-source $HOME/.local/theme-switcher/src/utils/is_theme_locked.sh
+source /usr/share/alacritty-use-theme/theme-switcher/shared-variables.sh
+source /usr/lib/alacritty-use-theme/utils/debug.sh
+source /usr/lib/alacritty-use-theme/utils/is_theme_locked.sh
 
 
 is_theme_locked

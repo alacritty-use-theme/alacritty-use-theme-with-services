@@ -1,12 +1,10 @@
 [Unit]
-Description=Theme switcher timer
+Description=alacritty-use-theme timer
 
 [Timer]
 OnStartupSec=0
-;OnUnitActiveSec=1min
 OnCalendar=*-*-* *:*:00
-; Unit=theme-switcher.target
-Unit=theme-switcher.service
+Unit=alacritty-use-theme.service
 
 [Install]
 WantedBy=timers.target
