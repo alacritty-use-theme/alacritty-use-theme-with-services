@@ -16,12 +16,12 @@ lng=-74.04
 ```
 
 ### geoclue2 provider
-You will need to update the geoclue config (/etc/geoclue/geoclue.conf)
+You will need to update geoclue.config (/etc/geoclue/geoclue.conf)
 
 #### Determine which configuration option geoclue will use.
 1. WIFI
 Let your wifi connection determine your location.
-``` conf
+```sh
 # /etc/geoclue/geoclue.conf
 [wifi]
 enable=true
@@ -29,18 +29,18 @@ url=https://api.beacondb.net/v1/geolocate
 ```
 
 2. Static-Source
-Reads location data found in `/etc/geolocation`
+This uses the location data found in `/etc/geolocation`. 
 
-```
+```sh
 # /etc/geolocation
 40.6893129  # latitude
 -74.0445531 # longitude
 96          # altitude
 1.83        # accuracy radius (the diameter of the torch is 12 feet)
 ```
-checkout geoclue(5) `man geoclue 5` for more information.
 
-``` conf
+Inside of geoclue.conf update the configuration options as follows.
+```conf
 [static-source]
 enable=true
 
