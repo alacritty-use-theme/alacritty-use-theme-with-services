@@ -7,6 +7,7 @@ After=graphical-session.target theme-switcher.service
 Type=dbus
 BusName=org.xfce.Xfconf
 WorkingDirectory=/usr/lib/alacritty-use-theme
+EnvironmentFile=/usr/lib/alacritty-use-theme/environment.env
 ExecStart=/usr/lib/alacritty-use-theme/bin/theme-switcher/update-gdm.sh
 
 [Install]

@@ -14,5 +14,5 @@ RDSHFT_DAY='daytime'
 NIGHT_MODE='night'
 DAY_MODE='day'
 DAY_NIGHT_MODE_PATH='/usr/lib/alacritty-use-theme/theme-switcher/mode'
-ALACRITTY_USE_SYSTEM_THEME=$(echo $ALACRITTY_USE_SYSTEM_THEME | grep -o [[:digit:]])
+ALACRITTY_USE_SYSTEM_THEME=1
 
