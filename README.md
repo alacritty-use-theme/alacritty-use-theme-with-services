@@ -2,7 +2,7 @@
 
 Change alacritty's theme based on the current time and locale
 
-#### Provides: `alacritty-use-theme.target`, `alacritty-use-theme.timer`, `alacritty-use-theme.service`, `update-gtk-theme.service
+#### Provides: `alacritty-use-theme.target`, `alacritty-use-theme.timer`, `alacritty-use-theme.service`, `update-gtk-theme.service`
 ### Overview:
 `Systemd` starts the units (`alacritty-use-theme.target`, `alacritty-use-theme.timer`, `alacritty-use-theme.service`).
 
