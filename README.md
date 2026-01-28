@@ -1,5 +1,5 @@
 # alacritty-use-theme-with-gnome-darkmode
-
+[Demo of alacritty-use-theme-with-gnome-darkmode](/docs/demo.md)
 
 ## Install
 `yay -S alacritty-toggle-theme-on-darkmode.git`
