@@ -2,7 +2,6 @@
 Description=Change Theme based on sunrise/sunset
 Wants=display-manager.service update-gtk-theme.service
 After=network.target graphical-session.target
-Before=update-gtk-theme.service
 
 [Service]
 Type=oneshot
