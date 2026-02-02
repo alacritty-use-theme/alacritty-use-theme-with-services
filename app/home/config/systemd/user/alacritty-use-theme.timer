@@ -1,0 +1,10 @@
+[Unit]
+Description=alacritty-use-theme timer
+
+[Timer]
+OnStartupSec=0
+OnCalendar=*-*-* *:*:00
+Unit=alacritty-use-theme.service
+
+[Install]
+WantedBy=timers.target
