@@ -1,7 +1,8 @@
 ---
-dependencies: bin/alacritty-use-theme, systemd, redshift
+dependencies: systemd, redshift
 version: 1
 ---
+
 This uses systemd units
 - Services
 - Timers
