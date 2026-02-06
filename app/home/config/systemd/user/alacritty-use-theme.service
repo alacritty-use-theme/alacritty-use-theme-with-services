@@ -1,6 +1,6 @@
 [Unit]
 Description=Change Theme based on sunrise/sunset
-Wants=display-manager.service update-gtk-theme.service
+Wants=display-manager.service update-de-theme.service
 After=network.target graphical-session.target
 
 [Service]

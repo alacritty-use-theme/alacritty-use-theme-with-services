@@ -10,5 +10,5 @@ source $THEME_SWITCHER_DIRECTORY/get-sunrise-sunset.sh
 
 echo "_____${DAY_NIGHT}____"
 if [ -n $DAY_NIGHT ]; then
-  sh $THEME_SWITCHER_DIRECTORY/update-gdm.sh
+  sh $THEME_SWITCHER_DIRECTORY/update-de.sh
 fi

@@ -1,7 +1,7 @@
 [Unit]
 Description=alacritty-use-theme.target
-Wants=alacritty-use-theme.service update-gtk-theme.service
-After=alacritty-use-theme.service update-gtk-theme.service
+Wants=alacritty-use-theme.service update-de-theme.service
+After=alacritty-use-theme.service update-de-theme.service
 
 [Install]
 WantedBy=alacritty-use-theme.timer

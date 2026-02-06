@@ -8,9 +8,9 @@ if [[ -z $DAY_NIGHT ]]; then
   exit 0
 fi
 
-# Check for window manager eg (i3wm, gdm)
-#if  command -v gdm &> /dev/null; then
-sh $THEME_SWITCHER_DIRECTORY/toggle-theme-per-mode.sh
-#fi
+# Check for known window manager eg (i3wm, gdm)
+# if  command -v gdm &> /dev/null; then
+  sh $THEME_SWITCHER_DIRECTORY/toggle-theme-per-mode.sh
+# fi
 
 
