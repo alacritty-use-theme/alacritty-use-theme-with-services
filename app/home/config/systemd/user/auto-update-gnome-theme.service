@@ -1,0 +1,14 @@
+[Unit]
+Description=Sets gsettings prefer-<light|dark>
+After=alacritty-use-theme.service
+Requires=alacritty-use-theme.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/usr/lib/alacritty-use-theme
+ExecStart=/home/%u/.local/bin/auto-update-gnome-theme.sh
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+

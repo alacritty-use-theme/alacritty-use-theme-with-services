@@ -1,0 +1,9 @@
+[Unit]
+Description=watch file
+
+[Path]
+PathModified=/usr/lib/alacritty-use-theme/theme-switcher/mode
+
+[Install]
+WantedBy=alacritty-use-theme.target
+

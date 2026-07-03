@@ -9,8 +9,12 @@ if [[ -z $DAY_NIGHT ]]; then
 fi
 
 # Check for known window manager eg (i3wm, gdm)
-# if  command -v gdm &> /dev/null; then
+if  command -v gdm &> /dev/null; then
+  echo 'is gdm; does nothing'
+  # Does nothing instead use auto-update-gnome-theme.service
+  return
+else
   sh $THEME_SWITCHER_DIRECTORY/toggle-theme-per-mode.sh
-# fi
+fi
 
 
