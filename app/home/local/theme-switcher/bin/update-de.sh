@@ -12,7 +12,7 @@ fi
 if  command -v gdm &> /dev/null; then
   echo 'is gdm; does nothing'
   # Does nothing instead use auto-update-gnome-theme.service
-  return
+  exit 0
 else
   sh $THEME_SWITCHER_DIRECTORY/toggle-theme-per-mode.sh
 fi

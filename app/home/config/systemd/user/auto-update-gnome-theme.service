@@ -6,7 +6,7 @@ Requires=alacritty-use-theme.service
 [Service]
 Type=oneshot
 WorkingDirectory=/usr/lib/alacritty-use-theme
-ExecStart=/home/%u/.local/bin/auto-update-gnome-theme.sh
+ExecStart=/usr/lib/alacritty-use-theme/bin/theme-switcher/auto-update-gnome-theme.sh
 Restart=on-failure
 
 [Install]
