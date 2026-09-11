@@ -2,11 +2,15 @@
 Description="Toggle themes (day, night) for Alacritty mode"
 Wants=display-manager.service
 After=graphical-session.target
+StartLimitIntervalSec=3s
+StartLimitBurst=5
 
 [Service]
 Type=exec
 WorkingDirectory=%h
 ExecStart=/usr/bin/alacritty-use-theme/toggle-mode-on-signal.sh
+Restart=on-failure
+RestartSec=3s
 
 [Install]
 WantedBy=default.target
